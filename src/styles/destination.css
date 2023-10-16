@@ -497,6 +497,9 @@ video {
 .relative{
   position: relative;
 }
+.sticky{
+  position: sticky;
+}
 .col-span-1{
   grid-column: span 1 / span 1;
 }
@@ -519,6 +522,12 @@ video {
 .my-auto{
   margin-top: auto;
   margin-bottom: auto;
+}
+.ml-5{
+  margin-left: 1.25rem;
+}
+.mt-5{
+  margin-top: 1.25rem;
 }
 .block{
   display: block;
@@ -665,23 +674,22 @@ main{
 .content-one{
   grid-column: span 2 / span 2;
   height: 100%;
-  position: relative;
-  overflow: hidden;
-  /* background-image: url("../images/desktop-image-hero-1.jpg");
-  max-width: 100%;
+  /* position: relative;
+  overflow: hidden; */
+  background-image: url("../images/desktop-image-hero-1.jpg");
   background-size: cover;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 nav{
+  margin-top: 1.25rem;
+  margin-left: 1.25rem;
   display: flex;
-  position: fixed;
-  top: 30px;
-  left: 20px;
 }
 
 nav ul{
   display: flex;
+  justify-content: center;
   gap: 2.5rem;
 }
 
@@ -802,3 +810,13 @@ nav ul li:hover{
 .inner-section-two {
   color: hsl(0, 0%, 63%);
 }
+
+
+/* @media and (max-width:481px){
+  .one {
+    @apply col-span-1;
+    background-image: url("../images/image-about-dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
+

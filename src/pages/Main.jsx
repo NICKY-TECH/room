@@ -11,7 +11,7 @@ function Main() {
       <article className="section-one">
         <div className="content-one">
           <nav>
-            <img src={logo} style={{ width: '30%' ,height:'30px', marginRight:'50px'}} />
+            <img src={logo} style={{ width: '15%' ,height:'35px', marginRight:'50px'}} />
             <ul>
               <li>home</li>
               <li>shop</li>
@@ -19,7 +19,7 @@ function Main() {
               <li>contact</li>
             </ul>
           </nav>
-          <img src={hero} />
+          {/* <img src={hero} /> */}
         </div>
         <div className="content-two">
           <div className="content-two-inner">
