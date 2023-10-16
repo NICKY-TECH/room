@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Blinker:wght@600&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Lato:ital,wght@1,300&family=League+Spartan:wght@500;600;700&family=Manrope:wght@400;500&family=Open+Sans:wght@400;700&family=Outfit:wght@400;700&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700;1,800&family=Roboto:ital,wght@0,500;1,400&family=Rubik:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply grid grid-rows-3 w-full h-screen;
+}
+
+.section-one {
+  @apply grid row-span-2 grid-cols-3;
+  background-color: tomato;
+}
+
+.section-two {
+  @apply row-span-1 grid grid-cols-3;
+}
+
+.content-one {
+  @apply col-span-2 h-full;
+  position: relative;
+  overflow: hidden;
+  /* background-image: url("../images/desktop-image-hero-1.jpg");
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat; */
+}
+
+nav {
+  @apply flex;
+  position: fixed;
+  top: 30px;
+  left: 20px;
+}
+
+nav ul {
+  @apply flex gap-10;
+}
+
+nav ul li {
+  @apply text-white font-LS;
+  font-size: 1.4rem;
+}
+
+nav ul li:hover{
+  border-bottom: 4px solid white;
+  cursor: pointer;
+}
+
+.content-one img {
+  width: 100%;
+  height: inherit;
+}
+
+.content-two {
+  @apply col-span-1 m-auto h-full flex flex-col;
+  /* background-color: brown; */
+  background-color: hsl(0, 0%, 100%);
+}
+
+.content-two-inner {
+  @apply w-4/5 m-auto;
+}
+.Discover {
+  @apply font-LS font-bold;
+  font-weight: 700;
+  font-size: 2.1rem;
+}
+
+.main-content-two {
+  color: hsl(0, 0%, 63%);
+}
+
+.shop-now {
+  @apply font-LS font-thin uppercase my-auto;
+  font-size: 1.3rem;
+  letter-spacing: 0.5em;
+}
+
+.arrow {
+  @apply my-auto;
+  display: inline-block;
+}
+
+.slider {
+  @apply w-full flex justify-start;
+}
+
+.slider-inner {
+  @apply flex gap-10 p-4 w-1/4 bg-black justify-center mt-auto;
+}
+
+.slider-left,
+.slider-right {
+  @apply hover:cursor-pointer;
+}
+
+.one {
+  @apply col-span-1;
+  background-image: url("../images/image-about-dark.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.two {
+  @apply col-span-1;
+}
+
+.three {
+  @apply col-span-1;
+  background-image: url("../images/image-about-light.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.two-content {
+  @apply mx-auto w-4/6 h-full mt-1;
+}
+
+.section-two-content-two {
+  @apply font-LS uppercase mt-3;
+  font-weight: 700;
+  letter-spacing: 0.4em;
+  word-spacing: 0.5em;
+}
+
+.inner-section-two {
+  color: hsl(0, 0%, 63%);
+}
