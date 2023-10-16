@@ -16,7 +16,7 @@ main {
 }
 
 .close {
-  @apply hover:cursor-pointer;
+  @apply hover:cursor-pointer max-[480px]:h-1/2 max-[480px]:w-2/4;
   color: hsl(0, 0%, 27%);
 }
 
