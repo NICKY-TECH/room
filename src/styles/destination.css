@@ -700,15 +700,15 @@ nav ul li{
   font-size: 1.4rem;
 }
 
-nav ul li:hover{
+nav ul li:hover {
   border-bottom: 4px solid white;
   cursor: pointer;
 }
 
-.content-one img {
+/* .content-one img {
   width: 100%;
   height: inherit;
-}
+} */
 
 .content-two{
   grid-column: span 1 / span 1;
@@ -811,12 +811,8 @@ nav ul li:hover{
   color: hsl(0, 0%, 63%);
 }
 
-
-/* @media and (max-width:481px){
-  .one {
-    @apply col-span-1;
-    background-image: url("../images/image-about-dark.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  } */
-
+@media (max-width: 481px) {
+  body{
+    background-color: coral;
+  }
+}
