@@ -670,9 +670,15 @@ body,html{
 
 main{
   display: grid;
-  height: 100%;
   width: 100%;
   grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 768px){
+
+  main{
+    height: 100%;
+  }
 }
 
 .section-one{
