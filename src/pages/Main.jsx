@@ -10,7 +10,6 @@ import url1 from "../images/desktop-image-hero-2.jpg";
 import url2 from "../images/desktop-image-hero-3.jpg";
 import logo from "../images/logo.svg";
 import { useState } from "react";
-import { func } from "joi";
 
 const slides = [
   {
