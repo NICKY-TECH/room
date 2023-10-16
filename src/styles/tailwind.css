@@ -10,7 +10,7 @@ html {
 }
 
 main {
-  @apply grid  max-[480px]:grid-rows-2 md:grid-rows-3 w-full h-full;
+  @apply grid  max-[480px]:grid-rows-2 md:grid-rows-3 w-full h-full max-[480px]:overflow-x-hidden;
   position: relative;
   z-index: 0;
 }
