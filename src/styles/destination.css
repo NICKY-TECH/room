@@ -670,7 +670,7 @@ body,html{
 
 main{
   display: grid;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
