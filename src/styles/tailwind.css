@@ -43,7 +43,7 @@ main {
 }
 
 .content-two-inner {
-  @apply max-[480px]:h-4/5 max-[480px]:flex max-[480px]:justify-center md:w-4/5 md:m-auto h-auto;
+  @apply max-[480px]:h-full max-[480px]:flex max-[480px]:justify-center md:w-4/5 md:m-auto h-auto;
   /* background-color: aqua; */
 }
 
