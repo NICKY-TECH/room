@@ -131,15 +131,33 @@ nav ul li:hover {
     background-color: tomato;
   }
 
-  .content-two {
-    @apply row-span-1;
-    /* background-color: brown; */
-    background-color: hsl(0, 0%, 100%);
-  }
   
 
   .content-one {
     @apply row-span-2;
     background-image: url("../images/mobile-image-hero-1.jpg");
   }
+
+  .content-two {
+    @apply row-span-1;
+    /* background-color: brown; */
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .section-two {
+    @apply grid grid-rows-3;
+  }
+
+  .one {
+    @apply row-span-1;
+  }
+  
+  .two {
+    @apply row-span-1;
+  }
+  
+  .three {
+    @apply row-span-1;
+  }
+  
 }
