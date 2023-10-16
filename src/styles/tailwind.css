@@ -46,7 +46,7 @@ main {
 
 .over-lay-nav ul li {
   @apply text-black font-LS;
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 
 .section-one {
