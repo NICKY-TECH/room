@@ -550,6 +550,9 @@ video {
 .h-full{
   height: 100%;
 }
+.h-screen{
+  height: 100vh;
+}
 .w-1{
   width: 0.25rem;
 }
@@ -558,6 +561,9 @@ video {
 }
 .w-11{
   width: 2.75rem;
+}
+.w-11\/12{
+  width: 91.666667%;
 }
 .w-2{
   width: 0.5rem;
@@ -571,9 +577,6 @@ video {
 .w-4\/5{
   width: 80%;
 }
-.w-4\/6{
-  width: 66.666667%;
-}
 .w-full{
   width: 100%;
 }
@@ -586,6 +589,9 @@ video {
 .resize{
   resize: both;
 }
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .grid-cols-3{
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -594,6 +600,12 @@ video {
 }
 .grid-rows-3{
   grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+.flex-row{
+  flex-direction: row;
+}
+.flex-col{
+  flex-direction: column;
 }
 .justify-start{
   justify-content: flex-start;
@@ -653,7 +665,7 @@ video {
 
 main{
   display: grid;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
@@ -661,67 +673,103 @@ main{
 .section-one{
   grid-row: span 2 / span 2;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  background-color: tomato;
+}
+
+@media (max-width: 480px){
+
+  .section-one{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+
+  .section-one{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.section-one {
+  background-color: aqua;
 }
 
 .section-two{
   grid-row: span 1 / span 1;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.content-one{
-  grid-column: span 2 / span 2;
-  height: 100%;
-  /* position: relative;
-  overflow: hidden; */
-  background-image: url("../images/desktop-image-hero-1.jpg");
+@media (max-width: 480px){
+
+  .section-two{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+
+  .section-two{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.section-two {
+  /* background-color: blueviolet; */
+}
+
+@media (max-width: 480px){
+
+  .content-one{
+    grid-row: span 1 / span 1;
+  }
+}
+
+@media (min-width: 768px){
+
+  .content-one{
+    grid-column: span 2 / span 2;
+  }
+}
+
+.content-one {
+  /* background-image: url("../images/desktop-image-hero-1.jpg");
+  background-color: brown;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
-nav{
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
-  display: flex;
-}
-
-nav ul{
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-}
-
-nav ul li{
-  font-family: League Spartan;
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-  font-size: 1.4rem;
-}
-
-nav ul li:hover {
-  border-bottom: 4px solid white;
-  cursor: pointer;
-}
-
-/* .content-one img {
+.content-one img {
   width: 100%;
-  height: inherit;
-} */
+  height: 100%;
+}
 
 .content-two{
-  grid-column: span 1 / span 1;
-  margin: auto;
   display: flex;
-  height: 100%;
-  flex-direction: column;
+}
+
+@media (max-width: 480px){
+
+  .content-two{
+    grid-row: span 2 / span 2;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px){
+
+  .content-two{
+    grid-column: span 1 / span 1;
+    flex-direction: column;
+  }
+}
+
+.content-two {
   /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
 
 .content-two-inner{
   margin: auto;
+  height: auto;
   width: 80%;
 }
 .Discover{
@@ -774,32 +822,44 @@ nav ul li:hover {
 
 .one{
   grid-column: span 1 / span 1;
-  background-image: url("../images/image-about-dark.jpg");
+  background-color: blueviolet;
+  /* background-image: url("../images/image-about-dark.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+.one img {
+  width: 100%;
+  height: 100%;
 }
 
 .two{
   grid-column: span 1 / span 1;
+  height: 100%;
+  /* background-color: aquamarine; */
 }
 
 .three{
   grid-column: span 1 / span 1;
-  background-image: url("../images/image-about-light.jpg");
+  height: 100%;
+  /* background-image: url("../images/image-about-light.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+.three img {
+  width: 100%;
+  height: 100%;
 }
 
 .two-content{
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.25rem;
-  height: 100%;
-  width: 66.666667%;
+  width: 91.666667%;
 }
 
 .section-two-content-two{
-  margin-top: 0.75rem;
   font-family: League Spartan;
   text-transform: uppercase;
   font-weight: 700;
@@ -811,8 +871,28 @@ nav ul li:hover {
   color: hsl(0, 0%, 63%);
 }
 
-@media (max-width: 481px) {
-  body{
-    background-color: coral;
+@media (max-width: 480px){
+
+  .max-\[480px\]\:row-span-1{
+    grid-row: span 1 / span 1;
+  }
+
+  .max-\[480px\]\:row-span-2{
+    grid-row: span 2 / span 2;
+  }
+
+  .max-\[480px\]\:grid-rows-3{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .max-\[480px\]\:flex-row{
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px){
+
+  .md\:col-span-1{
+    grid-column: span 1 / span 1;
   }
 }

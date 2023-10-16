@@ -2,6 +2,8 @@ import "../styles/destination.css";
 import arrow from "../images/icon-arrow.svg";
 import right from "../images/icon-angle-right.svg";
 import left from "../images/icon-angle-left.svg";
+import about from "../images/image-about-dark.jpg";
+import light from "../images/image-about-light.jpg";
 import hero from "../images/desktop-image-hero-1.jpg";
 import logo from "../images/logo.svg";
 
@@ -10,7 +12,7 @@ function Main() {
     <main>
       <article className="section-one">
         <div className="content-one">
-          <nav>
+          {/* <nav>
             <img src={logo} style={{ width: '15%' ,height:'35px', marginRight:'50px'}} />
             <ul>
               <li>home</li>
@@ -18,8 +20,8 @@ function Main() {
               <li>about</li>
               <li>contact</li>
             </ul>
-          </nav>
-          {/* <img src={hero} /> */}
+          </nav> */}
+          <img src={hero} />
         </div>
         <div className="content-two">
           <div className="content-two-inner">
@@ -45,17 +47,19 @@ function Main() {
           <div className="slider">
             <div className="slider-inner">
               <div className="slider-left">
-                <img src={left} />
+                <img src={left}  style={{ width:'80%' }}/>
               </div>
               <div className="slider-right">
-                <img src={right} />
+                <img src={right} style={{ width:'80%' }}/>
               </div>
             </div>
           </div>
         </div>
       </article>
       <article className="section-two">
-        <div className="one"></div>
+        <div className="one">
+          <img src={about} />
+        </div>
         <div className="two">
           <div className="two-content">
             <p className="section-two-content-two"> About our furniture</p>
@@ -69,7 +73,9 @@ function Main() {
             </p>
           </div>
         </div>
-        <div className="three"></div>
+        <div className="three">
+          <img src={light}/>
+        </div>
       </article>
     </main>
   );

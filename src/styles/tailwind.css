@@ -5,59 +5,40 @@
 @tailwind utilities;
 
 main {
-  @apply grid grid-rows-3 w-full h-screen;
+  @apply grid grid-rows-3 w-full h-full;
 }
 
 .section-one {
-  @apply grid row-span-2 grid-cols-3;
-  background-color: tomato;
+  @apply grid row-span-2 max-[480px]:grid-rows-3 md:grid-cols-3;
+  background-color: aqua;
 }
 
 .section-two {
-  @apply row-span-1 grid grid-cols-3;
+  @apply row-span-1 grid max-[480px]:grid-rows-3 md:grid-cols-3;
+  /* background-color: blueviolet; */
 }
 
 .content-one {
-  @apply col-span-2 h-full;
-  overflow: hidden;
-  /* position: relative;
-  overflow: hidden; */
-  background-image: url("../images/desktop-image-hero-1.jpg");
+  @apply max-[480px]:row-span-1 md:col-span-2;
+  /* background-image: url("../images/desktop-image-hero-1.jpg");
+  background-color: brown;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
-nav {
-  @apply flex mt-5 ml-5;
-}
-
-nav ul {
-  @apply flex gap-10 justify-center;
-}
-
-nav ul li {
-  @apply text-white font-LS;
-  font-size: 1.4rem;
-}
-
-nav ul li:hover {
-  border-bottom: 4px solid white;
-  cursor: pointer;
-}
-
-/* .content-one img {
+.content-one img {
   width: 100%;
-  height: inherit;
-} */
+  @apply h-full;
+}
 
 .content-two {
-  @apply col-span-1 m-auto h-full flex flex-col;
+  @apply max-[480px]:row-span-2 md:col-span-1 flex max-[480px]:flex-row md:flex-col;
   /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
 
 .content-two-inner {
-  @apply w-4/5 m-auto;
+  @apply w-4/5 m-auto h-auto;
 }
 .Discover {
   @apply font-LS font-bold;
@@ -95,28 +76,41 @@ nav ul li:hover {
 
 .one {
   @apply col-span-1;
-  background-image: url("../images/image-about-dark.jpg");
+  background-color: blueviolet;
+  /* background-image: url("../images/image-about-dark.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+.one img {
+  width: 100%;
+  @apply h-full;
 }
 
 .two {
-  @apply col-span-1;
+  @apply col-span-1 h-full;
+  /* background-color: aquamarine; */
 }
 
 .three {
   @apply col-span-1;
-  background-image: url("../images/image-about-light.jpg");
+  height: 100%;
+  /* background-image: url("../images/image-about-light.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
+}
+
+.three img {
+  width: 100%;
+  @apply h-full;
 }
 
 .two-content {
-  @apply mx-auto w-4/6 h-full mt-1;
+  @apply mx-auto w-11/12 mt-1;
 }
 
 .section-two-content-two {
-  @apply font-LS uppercase mt-3;
+  @apply font-LS uppercase;
   font-weight: 700;
   letter-spacing: 0.4em;
   word-spacing: 0.5em;
@@ -124,39 +118,4 @@ nav ul li:hover {
 
 .inner-section-two {
   color: hsl(0, 0%, 63%);
-}
-
-@media and (max-width: 788px) {
-  .section-one {
-    @apply grid grid-rows-3;
-    background-color: tomato;
-  }
-  .content-one {
-    @apply row-span-2;
-    /* background-image: url("../images/mobile-image-hero-1.jpg"); */
-    background-color: teal;
-  }
-
-  .content-two {
-    @apply row-span-1;
-    /* background-color: brown; */
-    background-color: hsl(0, 0%, 100%);
-  }
-
-  .section-two {
-    @apply grid grid-rows-3;
-  }
-
-  .one {
-    @apply row-span-1;
-  }
-  
-  .two {
-    @apply row-span-1;
-  }
-  
-  .three {
-    @apply row-span-1;
-  }
-  
 }
