@@ -693,17 +693,30 @@ main{
   display: grid;
   height: 100%;
   width: 100%;
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 480px){
+
+  main{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 768px){
+
+  main{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .section-one{
-  grid-row: span 2 / span 2;
   display: grid;
 }
 
 @media (max-width: 480px){
 
   .section-one{
+    grid-row: span 1 / span 1;
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 }
@@ -711,6 +724,7 @@ main{
 @media (min-width: 768px){
 
   .section-one{
+    grid-row: span 2 / span 2;
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
@@ -1038,6 +1052,10 @@ main{
     grid-column: span 2 / span 2;
   }
 
+  .md\:row-span-2{
+    grid-row: span 2 / span 2;
+  }
+
   .md\:m-auto{
     margin: auto;
   }
@@ -1052,6 +1070,10 @@ main{
 
   .md\:w-4\/5{
     width: 80%;
+  }
+
+  .md\:grid-rows-3{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
   .md\:justify-start{

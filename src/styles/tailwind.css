@@ -10,11 +10,11 @@ html {
 }
 
 main {
-  @apply grid grid-rows-3 w-full h-full;
+  @apply grid  max-[480px]:grid-rows-2 md:grid-rows-3 w-full h-full;
 }
 
 .section-one {
-  @apply grid row-span-2 max-[480px]:grid-rows-2 md:grid-cols-3;
+  @apply grid max-[480px]:grid-rows-2 max-[480px]:row-span-1 md:row-span-2  md:grid-cols-3;
   /* background-color: aqua; */
 }
 
