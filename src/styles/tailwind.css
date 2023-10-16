@@ -125,7 +125,7 @@ nav ul li:hover {
   color: hsl(0, 0%, 63%);
 }
 
-@media (max-width: 481px) {
+@media screen and (max-width: 481px) {
   .section-one {
     @apply grid grid-rows-3;
     background-color: tomato;
