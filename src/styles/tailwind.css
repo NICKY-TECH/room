@@ -19,6 +19,7 @@ main {
 
 .content-one {
   @apply col-span-2 h-full;
+  overflow: hidden;
   /* position: relative;
   overflow: hidden; */
   background-image: url("../images/desktop-image-hero-1.jpg");
