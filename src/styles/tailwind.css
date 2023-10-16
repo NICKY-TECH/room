@@ -4,9 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body,
+html {
   height: 100%;
-  
 }
 
 main {
@@ -14,8 +14,8 @@ main {
 }
 
 .section-one {
-  @apply grid row-span-2 max-[480px]:grid-rows-3 md:grid-cols-3;
-  background-color: aqua;
+  @apply grid row-span-2 max-[480px]:grid-rows-2 md:grid-cols-3;
+  /* background-color: aqua; */
 }
 
 .section-two {
@@ -24,7 +24,7 @@ main {
 }
 
 .content-one {
-  @apply max-[480px]:row-span-1 md:col-span-2;
+  @apply max-[480px]:row-span-1 md:col-span-2 h-full;
   /* background-image: url("../images/desktop-image-hero-1.jpg");
   background-color: brown;
   background-size: cover;
@@ -37,13 +37,22 @@ main {
 }
 
 .content-two {
-  @apply max-[480px]:row-span-2 md:col-span-1 flex max-[480px]:flex-row md:flex-col;
+  @apply max-[480px]:h-full max-[480px]:row-span-1 max-[480px]:justify-center max-[480px]:items-center md:col-span-1 md:flex md:flex-col;
   /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
 
 .content-two-inner {
+  @apply max-[480px]:h-4/5 md:w-4/5 md:m-auto h-auto;
+  /* background-color: aqua; */
+}
+
+.content-two-inner-img {
   @apply w-4/5 m-auto h-auto;
+}
+
+.content-two-inner img {
+  width: 100%;
 }
 .Discover {
   @apply font-LS font-bold;
@@ -66,8 +75,12 @@ main {
   display: inline-block;
 }
 
-.slider {
-  @apply w-full flex justify-start;
+.slider{
+  @apply max-[480px]:hidden w-full sm:flex justify-start;
+}
+
+.slider2{
+  @apply max-[480px]:flex max-[480px]:justify-end w-full md:justify-start sm:hidden md:hidden lg:hidden;
 }
 
 .slider-inner {
@@ -124,3 +137,4 @@ main {
 .inner-section-two {
   color: hsl(0, 0%, 63%);
 }
+

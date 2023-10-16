@@ -523,6 +523,9 @@ video {
   margin-top: auto;
   margin-bottom: auto;
 }
+.mb-auto{
+  margin-bottom: auto;
+}
 .ml-5{
   margin-left: 1.25rem;
 }
@@ -546,6 +549,15 @@ video {
 }
 .hidden{
   display: none;
+}
+.h-1{
+  height: 0.25rem;
+}
+.h-4{
+  height: 1rem;
+}
+.h-auto{
+  height: auto;
 }
 .h-full{
   height: 100%;
@@ -598,6 +610,9 @@ video {
 .grid-cols-5{
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
+.grid-rows-2{
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
 .grid-rows-3{
   grid-template-rows: repeat(3, minmax(0, 1fr));
 }
@@ -607,8 +622,14 @@ video {
 .flex-col{
   flex-direction: column;
 }
+.items-center{
+  align-items: center;
+}
 .justify-start{
   justify-content: flex-start;
+}
+.justify-end{
+  justify-content: flex-end;
 }
 .justify-center{
   justify-content: center;
@@ -663,9 +684,9 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-body{
+body,
+html {
   height: 100%;
-  
 }
 
 main{
@@ -683,7 +704,7 @@ main{
 @media (max-width: 480px){
 
   .section-one{
-    grid-template-rows: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -695,7 +716,7 @@ main{
 }
 
 .section-one {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .section-two{
@@ -719,6 +740,10 @@ main{
 
 .section-two {
   /* background-color: blueviolet; */
+}
+
+.content-one{
+  height: 100%;
 }
 
 @media (max-width: 480px){
@@ -747,15 +772,13 @@ main{
   height: 100%;
 }
 
-.content-two{
-  display: flex;
-}
-
 @media (max-width: 480px){
 
   .content-two{
-    grid-row: span 2 / span 2;
-    flex-direction: row;
+    grid-row: span 1 / span 1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -763,6 +786,7 @@ main{
 
   .content-two{
     grid-column: span 1 / span 1;
+    display: flex;
     flex-direction: column;
   }
 }
@@ -773,9 +797,36 @@ main{
 }
 
 .content-two-inner{
+  height: auto;
+}
+
+@media (max-width: 480px){
+
+  .content-two-inner{
+    height: 80%;
+  }
+}
+
+@media (min-width: 768px){
+
+  .content-two-inner{
+    margin: auto;
+    width: 80%;
+  }
+}
+
+.content-two-inner {
+  /* background-color: aqua; */
+}
+
+.content-two-inner-img{
   margin: auto;
   height: auto;
   width: 80%;
+}
+
+.content-two-inner img {
+  width: 100%;
 }
 .Discover{
   font-family: League Spartan;
@@ -804,9 +855,56 @@ main{
 }
 
 .slider{
-  display: flex;
   width: 100%;
   justify-content: flex-start;
+}
+
+@media (max-width: 480px){
+
+  .slider{
+    display: none;
+  }
+}
+
+@media (min-width: 640px){
+
+  .slider{
+    display: flex;
+  }
+}
+
+.slider2{
+  width: 100%;
+}
+
+@media (max-width: 480px){
+
+  .slider2{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media (min-width: 640px){
+
+  .slider2{
+    display: none;
+  }
+}
+
+@media (min-width: 768px){
+
+  .slider2{
+    display: none;
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px){
+
+  .slider2{
+    display: none;
+  }
 }
 
 .slider-inner{
@@ -882,16 +980,51 @@ main{
     grid-row: span 1 / span 1;
   }
 
-  .max-\[480px\]\:row-span-2{
-    grid-row: span 2 / span 2;
+  .max-\[480px\]\:flex{
+    display: flex;
+  }
+
+  .max-\[480px\]\:hidden{
+    display: none;
+  }
+
+  .max-\[480px\]\:h-4\/5{
+    height: 80%;
+  }
+
+  .max-\[480px\]\:h-full{
+    height: 100%;
+  }
+
+  .max-\[480px\]\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
 
   .max-\[480px\]\:grid-rows-3{
     grid-template-rows: repeat(3, minmax(0, 1fr));
   }
 
-  .max-\[480px\]\:flex-row{
-    flex-direction: row;
+  .max-\[480px\]\:items-center{
+    align-items: center;
+  }
+
+  .max-\[480px\]\:justify-end{
+    justify-content: flex-end;
+  }
+
+  .max-\[480px\]\:justify-center{
+    justify-content: center;
+  }
+}
+
+@media (min-width: 640px){
+
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:hidden{
+    display: none;
   }
 }
 
@@ -900,4 +1033,36 @@ main{
   .md\:col-span-1{
     grid-column: span 1 / span 1;
   }
+
+  .md\:col-span-2{
+    grid-column: span 2 / span 2;
+  }
+
+  .md\:m-auto{
+    margin: auto;
+  }
+
+  .md\:flex{
+    display: flex;
+  }
+
+  .md\:hidden{
+    display: none;
+  }
+
+  .md\:w-4\/5{
+    width: 80%;
+  }
+
+  .md\:justify-start{
+    justify-content: flex-start;
+  }
 }
+
+@media (min-width: 1024px){
+
+  .lg\:hidden{
+    display: none;
+  }
+}
+

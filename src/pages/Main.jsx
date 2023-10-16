@@ -4,10 +4,51 @@ import right from "../images/icon-angle-right.svg";
 import left from "../images/icon-angle-left.svg";
 import about from "../images/image-about-dark.jpg";
 import light from "../images/image-about-light.jpg";
+import mobile from "../images/desktop-image-hero-3.jpg";
 import hero from "../images/desktop-image-hero-1.jpg";
+import url1 from "../images/desktop-image-hero-2.jpg";
+import url2 from "../images/desktop-image-hero-3.jpg";
 import logo from "../images/logo.svg";
+import { useState } from "react";
+import { func } from "joi";
+
+const slides = [
+  {
+    type: "text",
+    url: "",
+  },
+  {
+    type: "image",
+    url: url1,
+  },
+  {
+    type: "image",
+    url: url2,
+  },
+];
 
 function Main() {
+  const [slide, setSlide] = useState(0);
+  function prev() {
+    if (slide === 0) {
+      setSlide(0);
+    } else if (slide > 0) {
+      setSlide((e) => {
+        return e - 1;
+      });
+    }
+  }
+
+  function next() {
+    if (slide === slides.length - 1) {
+      setSlide(0);
+    } else if (slide < slides.length - 1) {
+      setSlide((e) => {
+        return e + 1;
+      });
+    }
+  }
+
   return (
     <main>
       <article className="section-one">
@@ -21,36 +62,71 @@ function Main() {
               <li>contact</li>
             </ul>
           </nav> */}
-          <img src={hero} />
+          <img
+            src={hero}
+            srcSet="mobile.jpg 100%, hero.jpg 100%"
+            sizes="(max-width:480px) 480px,(min-width:768px)768px"
+          />
+
+          {/* <img src={hero} /> */}
         </div>
         <div className="content-two">
-          <div className="content-two-inner">
-            <p role="title" className="Discover">
-              Discover innovative ways to decorate
-            </p>
-
-            <p className="main-content-two">
-              We provide unmatched quality, comfort, and style for property
-              owners across the country. Our experts combine form and function
-              in bringing your vision to life. Create a room in your own style
-              with our collection and make your property a reflection of you and
-              what you love.
-            </p>
-
-            <div className="shop-now">
-              <span> Shop now</span>
-              <div className="arrow">
-                <img src={arrow} />
+        <div className="slider2">
+            <div className="slider-inner">
+              <div className="slider-left" onClick={prev}>
+                <img src={left} style={{ width: "80%" }} />
+              </div>
+              <div className="slider-right" onClick={next}>
+                <img src={right} style={{ width: "80%" }} />
               </div>
             </div>
           </div>
+          {slides[slide].type === "text" ? (
+            <div className="content-two-inner">
+              <p role="title" className="Discover">
+                Discover innovative ways to decorate
+              </p>
+
+              <p className="main-content-two">
+                We provide unmatched quality, comfort, and style for property
+                owners across the country. Our experts combine form and function
+                in bringing your vision to life. Create a room in your own style
+                with our collection and make your property a reflection of you
+                and what you love.
+              </p>
+
+              <div className="shop-now">
+                <span> Shop now</span>
+                <div className="arrow">
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+          {slides[slide].type === "image" ? (
+            <div className="content-two-inner">
+              <img src={slides[slide].url} />
+              {console.log(slides[slide].url)}
+
+              <div className="shop-now">
+                <span> Shop now</span>
+                <div className="arrow">
+                  <img src={arrow} />
+                </div>
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
           <div className="slider">
             <div className="slider-inner">
-              <div className="slider-left">
-                <img src={left}  style={{ width:'80%' }}/>
+              <div className="slider-left" onClick={prev}>
+                <img src={left} style={{ width: "80%" }} />
               </div>
-              <div className="slider-right">
-                <img src={right} style={{ width:'80%' }}/>
+              <div className="slider-right" onClick={next}>
+                <img src={right} style={{ width: "80%" }} />
               </div>
             </div>
           </div>
@@ -74,7 +150,7 @@ function Main() {
           </div>
         </div>
         <div className="three">
-          <img src={light}/>
+          <img src={light} />
         </div>
       </article>
     </main>
