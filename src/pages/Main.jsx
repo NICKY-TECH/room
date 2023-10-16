@@ -9,6 +9,8 @@ import hero from "../images/desktop-image-hero-1.jpg";
 import url1 from "../images/desktop-image-hero-2.jpg";
 import url2 from "../images/desktop-image-hero-3.jpg";
 import logo from "../images/logo.svg";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
 const slides = [
@@ -28,6 +30,7 @@ const slides = [
 
 function Main() {
   const [slide, setSlide] = useState(0);
+  const [menu, setMenu] = useState("false");
   function prev() {
     if (slide === 0) {
       setSlide(0);
@@ -48,27 +51,46 @@ function Main() {
     }
   }
 
+  function open() {
+    if (menu === "false") {
+      setMenu("true");
+     let overLay=document.getElementsByClassName("over-lay");
+     overLay[0].style.display="block";
+    }
+    else if(menu==="true"){
+      setMenu("false");
+      let overLay=document.getElementsByClassName("over-lay");
+      overLay[0].style.display="none";
+    }
+  }
+
   return (
     <main>
       <article className="section-one">
         <div className="content-one">
-          {/* <nav>
-            <img src={logo} style={{ width: '15%' ,height:'35px', marginRight:'50px'}} />
+          <nav className="nav">
+            <GiHamburgerMenu
+              className="ham"
+              style={{ width: "20%", height: "35px", color: "white" }}
+              onClick={open}
+            />
+            <img
+              src={logo}
+              style={{ width: "15%", height: "35px", marginRight: "50px" }}
+            />
             <ul>
               <li>home</li>
               <li>shop</li>
               <li>about</li>
               <li>contact</li>
             </ul>
-          </nav> */}
-          <img
-            src={hero}
-          />
+          </nav>
+          <img src={hero} />
 
           {/* <img src={hero} /> */}
         </div>
         <div className="content-two">
-        <div className="slider2">
+          <div className="slider2">
             <div className="slider-inner">
               <div className="slider-left" onClick={prev}>
                 <img src={left} style={{ width: "80%" }} />
@@ -150,6 +172,20 @@ function Main() {
           <img src={light} />
         </div>
       </article>
+      <section className="over-lay">
+        <nav className="over-lay-nav">
+          <AiOutlineClose
+            className="close"
+            style={{ width: "20%", height: "35px" }}
+          onClick={open}/>
+          <ul>
+            <li>home</li>
+            <li>shop</li>
+            <li>about</li>
+            <li>contact</li>
+          </ul>
+        </nav>
+      </section>
     </main>
   );
 }

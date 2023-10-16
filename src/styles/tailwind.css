@@ -11,6 +11,40 @@ html {
 
 main {
   @apply grid  max-[480px]:grid-rows-2 md:grid-rows-3 w-full h-full;
+  position: relative;
+  z-index: 0;
+}
+
+.close {
+  @apply hover:cursor-pointer;
+  color: hsl(0, 0%, 27%);
+}
+
+.over-lay {
+  @apply w-full h-full;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: none;
+}
+
+.over-lay-nav {
+  @apply bg-white w-full  h-1/6 px-2 flex gap-4 items-center;
+}
+
+.over-lay-nav ul {
+  @apply flex gap-10;
+}
+
+.over-lay-nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid black;
+}
+
+.over-lay-nav ul li {
+  @apply text-black font-LS;
+  font-size: 1.3rem;
 }
 
 .section-one {
@@ -43,8 +77,33 @@ main {
 }
 
 .content-two-inner {
-  @apply max-[480px]:h-4/5 max-[480px]:w-3/5 max-[480px]:flex max-[480px]:justify-center max-[480px]:items-center md:w-4/5 m-auto h-auto px-2;
+  @apply max-[480px]:h-4/5 max-[480px]:flex max-[480px]:flex-col md:w-4/5 md:m-auto h-auto;
   /* background-color: aqua; */
+}
+
+.ham {
+  @apply mr-auto  max-[480px]:flex sm:hidden;
+}
+
+.content-one .nav {
+  @apply flex gap-10 max-[480px]:justify-between max-[480px]:w-full;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+.content-one .nav ul {
+  @apply flex gap-8 max-[480px]:hidden sm:flex;
+}
+
+.content-one .nav ul li {
+  @apply text-white font-LS;
+  font-size: 1.3rem;
+}
+
+.content-one .nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid white;
 }
 
 .content-two-inner-img {
@@ -55,7 +114,7 @@ main {
   width: 100%;
 }
 .Discover {
-  @apply font-LS font-bold text-center;
+  @apply font-LS font-bold;
   font-weight: 700;
   font-size: 2.1rem;
 }
@@ -75,11 +134,11 @@ main {
   display: inline-block;
 }
 
-.slider{
+.slider {
   @apply max-[480px]:hidden w-full sm:flex justify-start;
 }
 
-.slider2{
+.slider2 {
   @apply max-[480px]:flex max-[480px]:justify-end w-full md:justify-start sm:hidden md:hidden lg:hidden;
 }
 
@@ -136,15 +195,4 @@ main {
 
 .inner-section-two {
   color: hsl(0, 0%, 63%);
-}
-
-
-@media (max-width:480px){
-  .Discover{
-    font-size: 1.9rem;
-  }
-
-  .main-content-two{
-    font-size: 0.7rem;
-  }
 }
