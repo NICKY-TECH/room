@@ -44,10 +44,10 @@ nav ul li:hover{
   cursor: pointer;
 }
 
-.content-one img {
+/* .content-one img {
   width: 100%;
   height: inherit;
-}
+} */
 
 .content-two {
   @apply col-span-1 m-auto h-full flex flex-col;
@@ -125,12 +125,18 @@ nav ul li:hover{
   color: hsl(0, 0%, 63%);
 }
 
-
-/* @media and (max-width:481px){
+ @media  (max-width:481px){
   .one {
     @apply col-span-1;
     background-image: url("../images/image-about-dark.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-  } */
+  } 
 
+  .content-one {
+    /* position: relative;
+    overflow: hidden; */
+    background-image: url("../images/mobile-image-hero-1.jpg");
+  }
+
+}
