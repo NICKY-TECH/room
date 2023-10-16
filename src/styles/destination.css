@@ -663,6 +663,11 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+body,html{
+  height: 100%;
+  
+}
+
 main{
   display: grid;
   height: 100%;
