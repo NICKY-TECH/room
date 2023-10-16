@@ -64,8 +64,6 @@ function Main() {
           </nav> */}
           <img
             src={hero}
-            srcSet="mobile.jpg 100%, hero.jpg 100%"
-            sizes="(max-width:480px) 480px,(min-width:768px)768px"
           />
 
           {/* <img src={hero} /> */}
