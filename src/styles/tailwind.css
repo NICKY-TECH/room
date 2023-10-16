@@ -43,7 +43,7 @@ main {
 }
 
 .content-two-inner {
-  @apply max-[480px]:h-4/5 w-4/5 md:m-auto h-auto;
+  @apply max-[480px]:h-4/5 w-4/5 m-auto h-auto;
   /* background-color: aqua; */
 }
 
