@@ -39,7 +39,7 @@ nav ul li {
   font-size: 1.4rem;
 }
 
-nav ul li:hover{
+nav ul li:hover {
   border-bottom: 4px solid white;
   cursor: pointer;
 }
@@ -125,18 +125,21 @@ nav ul li:hover{
   color: hsl(0, 0%, 63%);
 }
 
- @media  (max-width:481px){
-  .one {
-    @apply col-span-1;
-    background-image: url("../images/image-about-dark.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-  } 
-
-  .content-one {
-    /* position: relative;
-    overflow: hidden; */
-    background-image: url("../images/mobile-image-hero-1.jpg");
+@media (max-width: 481px) {
+  .section-one {
+    @apply grid row-span-2 grid-rows-3;
+    background-color: tomato;
   }
 
+  .content-two {
+    @apply row-span-1;
+    /* background-color: brown; */
+    background-color: hsl(0, 0%, 100%);
+  }
+  
+
+  .content-one {
+    @apply row-span-2;
+    background-image: url("../images/mobile-image-hero-1.jpg");
+  }
 }
