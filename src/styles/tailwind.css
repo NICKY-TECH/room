@@ -10,6 +10,7 @@
 
 body,
 html {
+  @apply flex;
   height: 100%;
 }
 
