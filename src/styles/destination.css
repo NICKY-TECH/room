@@ -720,6 +720,10 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+*{
+  border: 2px solid red;
+}
+
 body,
 html {
   height: 100%;
@@ -754,8 +758,18 @@ main {
   cursor: pointer;
 }
 
+@media (max-width: 480px){
+
+  .close{
+    height: 50%;
+    width: 50%;
+  }
+}
+
 .close {
   color: hsl(0, 0%, 27%);
+  width: 40%;
+  height: 50%;
 }
 
 .over-lay{
@@ -794,7 +808,7 @@ main {
   font-family: League Spartan;
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-  font-size: 1.3rem;
+  font-size: 0.9rem;
 }
 
 .section-one{
@@ -1146,6 +1160,16 @@ main {
   color: hsl(0, 0%, 63%);
 }
 
+@media (max-width: 480px) {
+  .content-one .nav {
+    left: 0;
+  }
+}
+
+.hover\:cursor-pointer:hover{
+  cursor: pointer;
+}
+
 @media (max-width: 480px){
 
   .max-\[480px\]\:row-span-1{
@@ -1158,6 +1182,10 @@ main {
 
   .max-\[480px\]\:hidden{
     display: none;
+  }
+
+  .max-\[480px\]\:h-1\/2{
+    height: 50%;
   }
 
   .max-\[480px\]\:h-4\/5{
