@@ -176,7 +176,7 @@ function Main() {
         <nav className="over-lay-nav">
           <AiOutlineClose
             className="close"
-            style={{ width: "15%", height: "30%" }}
+            style={{  height: "30%" }}
           onClick={open}/>
           <ul>
             <li>home</li>
