@@ -210,7 +210,11 @@ main {
     left: 0;
   }
 
-  .content-two-inner:nth-child(2){
+  .main-content-two{
     text-align: justify;
+  }
+.Discover{
+font-size: 1.8rem;
+margin-left: 2px;
   }
 }
