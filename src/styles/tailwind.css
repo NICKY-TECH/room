@@ -210,8 +210,7 @@ main {
     left: 0;
   }
 
-  .content-two-inner{
+  .content-two-inner:nth-child(2){
     text-align: justify;
-    margin-left: 6px;
   }
 }
