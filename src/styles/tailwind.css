@@ -65,7 +65,7 @@ main {
 }
 
 .section-two {
-  @apply row-span-1 grid max-[639px]:grid-rows-3 md:grid-cols-3;
+  @apply row-span-1 grid max-[639px]:grid-rows-2 md:grid-cols-3;
   /* background-color: blueviolet; */
 }
 
@@ -89,7 +89,7 @@ main {
 }
 
 .content-two-inner {
-  @apply max-[480px]:h-4/5 max-[480px]:flex max-[480px]:flex-col w-full m-auto md:w-4/5 md:m-auto h-auto;
+  @apply max-[639px]:h-4/5 max-[639px]:flex max-[639px]:flex-col w-full m-auto md:w-4/5 md:m-auto h-auto;
   /* background-color: aqua; */
 }
 
