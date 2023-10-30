@@ -559,9 +559,6 @@ video {
 .h-1{
   height: 0.25rem;
 }
-.h-1\/6{
-  height: 16.666667%;
-}
 .h-2{
   height: 0.5rem;
 }
@@ -678,6 +675,9 @@ video {
 .p-4{
   padding: 1rem;
 }
+.p-6{
+  padding: 1.5rem;
+}
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -721,7 +721,9 @@ video {
 }
 
 *{
-  border: 2px solid red;
+  box-sizing: border-box;
+  padding:0;
+  margin: 0;
 }
 
 body,
@@ -784,12 +786,12 @@ main {
 
 .over-lay-nav{
   display: flex;
-  height: 16.666667%;
   width: 100%;
   align-items: center;
   gap: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding: 1.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
