@@ -6,27 +6,11 @@ import about from "../images/image-about-dark.jpg";
 import light from "../images/image-about-light.jpg";
 import mobile from "../images/desktop-image-hero-3.jpg";
 import hero from "../images/desktop-image-hero-1.jpg";
-import url1 from "../images/desktop-image-hero-2.jpg";
-import url2 from "../images/desktop-image-hero-3.jpg";
+import slides from "../data/Images.jsx";
 import logo from "../images/logo.svg";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
-
-const slides = [
-  {
-    type: "text",
-    url: "",
-  },
-  {
-    type: "image",
-    url: url1,
-  },
-  {
-    type: "image",
-    url: url2,
-  },
-];
 
 function Main() {
   const [slide, setSlide] = useState(0);
@@ -62,7 +46,7 @@ function Main() {
     //   let overLay=document.getElementsByClassName("over-lay");
     //   overLay[0].style.display="none";
     // }
-    setMenu(!menu)
+    setMenu(!menu);
   }
 
   return (
@@ -173,12 +157,13 @@ function Main() {
           <img src={light} />
         </div>
       </article>
-  <section className={menu?"over-lay-hidden":"over-lay"}>
+      <section className={menu ? "over-lay-hidden" : "over-lay"}>
         <nav className="over-lay-nav">
           <AiOutlineClose
             className="close"
-            style={{  height: "15%" }}
-          onClick={open}/>
+            style={{ height: "15%" }}
+            onClick={open}
+          />
           <ul>
             <li>home</li>
             <li>shop</li>
