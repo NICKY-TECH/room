@@ -562,6 +562,9 @@ video {
 .h-1{
   height: 0.25rem;
 }
+.h-1\/4{
+  height: 25%;
+}
 .h-2{
   height: 0.5rem;
 }
@@ -603,6 +606,9 @@ video {
 }
 .w-full{
   width: 100%;
+}
+.flex-grow{
+  flex-grow: 1;
 }
 .border-collapse{
   border-collapse: collapse;
@@ -675,6 +681,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.p-2{
+  padding: 0.5rem;
+}
 .p-4{
   padding: 1rem;
 }
@@ -684,6 +693,10 @@ video {
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+}
+.py-1{
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 .font-LS{
   font-family: League Spartan;
@@ -732,6 +745,7 @@ video {
 body,
 html {
   height: 100%;
+  /* background-color: brown; */
 }
 
 main{
@@ -740,7 +754,7 @@ main{
   width: 100%;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   main{
     grid-template-rows: repeat(2, minmax(0, 1fr));
@@ -778,7 +792,6 @@ main {
 }
 
 .over-lay{
-  display: flex;
   height: 100%;
   width: 100%;
 }
@@ -792,23 +805,25 @@ main {
 
 .over-lay {
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
 
-.over-lay-mobile{
+.over-lay-hidden{
   display: none;
 }
 
 .over-lay-nav{
   display: flex;
+  height: 25%;
   width: 100%;
   align-items: center;
   gap: 1rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  padding: 1.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
@@ -834,7 +849,7 @@ main {
   display: grid;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .section-one{
     grid-row: span 1 / span 1;
@@ -859,7 +874,7 @@ main {
   display: grid;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .section-two{
     grid-template-rows: repeat(3, minmax(0, 1fr));
@@ -881,7 +896,7 @@ main {
   height: 100%;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .content-one{
     grid-row: span 1 / span 1;
@@ -907,7 +922,7 @@ main {
   height: 100%;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .content-two{
     grid-row: span 1 / span 1;
@@ -962,7 +977,7 @@ main {
   margin-right: auto;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .ham{
     display: flex;
@@ -981,10 +996,10 @@ main {
   gap: 2.5rem;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .content-one .nav{
-    width: 100%;
+    width: 83.333333%;
     justify-content: space-between;
   }
 }
@@ -1000,7 +1015,7 @@ main {
   gap: 2rem;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .content-one .nav ul{
     display: none;
@@ -1076,7 +1091,7 @@ main {
   justify-content: flex-start;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .slider{
     display: none;
@@ -1094,7 +1109,7 @@ main {
   width: 100%;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
   .slider2{
     display: flex;
@@ -1210,11 +1225,50 @@ main {
   cursor: pointer;
 }
 
-@media (max-width: 480px){
+@media (max-width: 639px){
 
-  .max-\[480px\]\:row-span-1{
+  .max-\[639px\]\:row-span-1{
     grid-row: span 1 / span 1;
   }
+
+  .max-\[639px\]\:flex{
+    display: flex;
+  }
+
+  .max-\[639px\]\:hidden{
+    display: none;
+  }
+
+  .max-\[639px\]\:h-full{
+    height: 100%;
+  }
+
+  .max-\[639px\]\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .max-\[639px\]\:grid-rows-3{
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+  }
+
+  .max-\[639px\]\:items-center{
+    align-items: center;
+  }
+
+  .max-\[639px\]\:justify-end{
+    justify-content: flex-end;
+  }
+
+  .max-\[639px\]\:justify-center{
+    justify-content: center;
+  }
+
+  .max-\[639px\]\:justify-between{
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px){
 
   .max-\[480px\]\:ml-3{
     margin-left: 0.75rem;
@@ -1222,10 +1276,6 @@ main {
 
   .max-\[480px\]\:flex{
     display: flex;
-  }
-
-  .max-\[480px\]\:hidden{
-    display: none;
   }
 
   .max-\[480px\]\:h-1\/2{
@@ -1236,36 +1286,8 @@ main {
     height: 80%;
   }
 
-  .max-\[480px\]\:h-full{
-    height: 100%;
-  }
-
-  .max-\[480px\]\:grid-rows-2{
-    grid-template-rows: repeat(2, minmax(0, 1fr));
-  }
-
-  .max-\[480px\]\:grid-rows-3{
-    grid-template-rows: repeat(3, minmax(0, 1fr));
-  }
-
   .max-\[480px\]\:flex-col{
     flex-direction: column;
-  }
-
-  .max-\[480px\]\:items-center{
-    align-items: center;
-  }
-
-  .max-\[480px\]\:justify-end{
-    justify-content: flex-end;
-  }
-
-  .max-\[480px\]\:justify-center{
-    justify-content: center;
-  }
-
-  .max-\[480px\]\:justify-between{
-    justify-content: space-between;
   }
 }
 

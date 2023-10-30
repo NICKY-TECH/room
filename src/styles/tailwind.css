@@ -13,10 +13,11 @@
 body,
 html {
   height: 100%;
+  /* background-color: brown; */
 }
 
 main {
-  @apply grid  max-[480px]:grid-rows-2 md:grid-rows-3 w-full h-full;
+  @apply grid  max-[639px]:grid-rows-2 md:grid-rows-3 w-full h-full;
   position: relative;
   z-index: 0;
 }
@@ -29,19 +30,19 @@ main {
 }
 
 .over-lay {
-  @apply w-full h-full max-[480px]:block sm:hidden;
+  @apply w-full h-full  sm:hidden;
   background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 1;
 }
 
-.over-lay-mobile {
+.over-lay-hidden {
   @apply hidden;
 }
 
 .over-lay-nav {
-  @apply bg-white w-full  p-6 px-2 flex gap-4 items-center;
+  @apply bg-white w-full  h-1/4 py-1 px-2 flex gap-4 items-center;
 }
 
 .over-lay-nav ul {
@@ -59,17 +60,17 @@ main {
 }
 
 .section-one {
-  @apply grid max-[480px]:grid-rows-2 max-[480px]:row-span-1 md:row-span-2  md:grid-cols-3;
+  @apply grid max-[639px]:grid-rows-2 max-[639px]:row-span-1 md:row-span-2  md:grid-cols-3;
   /* background-color: aqua; */
 }
 
 .section-two {
-  @apply row-span-1 grid max-[480px]:grid-rows-3 md:grid-cols-3;
+  @apply row-span-1 grid max-[639px]:grid-rows-3 md:grid-cols-3;
   /* background-color: blueviolet; */
 }
 
 .content-one {
-  @apply max-[480px]:row-span-1 md:col-span-2 h-full;
+  @apply max-[639px]:row-span-1 md:col-span-2 h-full;
   /* background-image: url("../images/desktop-image-hero-1.jpg");
   background-color: brown;
   background-size: cover;
@@ -82,7 +83,7 @@ main {
 }
 
 .content-two {
-  @apply max-[480px]:h-full max-[480px]:row-span-1 max-[480px]:justify-center max-[480px]:items-center md:col-span-1 md:flex md:flex-col;
+  @apply max-[639px]:h-full max-[639px]:row-span-1 max-[639px]:justify-center max-[639px]:items-center md:col-span-1 md:flex md:flex-col;
   /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
@@ -93,18 +94,18 @@ main {
 }
 
 .ham {
-  @apply mr-auto  max-[480px]:flex sm:hidden;
+  @apply mr-auto  max-[639px]:flex sm:hidden;
 }
 
 .content-one .nav {
-  @apply flex gap-10 max-[480px]:justify-between max-[480px]:w-full;
+  @apply flex gap-10 max-[639px]:justify-between max-[639px]:w-5/6;
   position: absolute;
   top: 30px;
   left: 25px;
 }
 
 .content-one .nav ul {
-  @apply flex gap-8 max-[480px]:hidden sm:flex;
+  @apply flex gap-8 max-[639px]:hidden sm:flex;
 }
 
 .content-one .nav ul li {
@@ -146,11 +147,11 @@ main {
 }
 
 .slider {
-  @apply max-[480px]:hidden w-full sm:flex justify-start;
+  @apply max-[639px]:hidden w-full sm:flex justify-start;
 }
 
 .slider2 {
-  @apply max-[480px]:flex max-[480px]:justify-end w-full md:justify-start sm:hidden md:hidden lg:hidden;
+  @apply max-[639px]:flex max-[639px]:justify-end w-full md:justify-start sm:hidden md:hidden lg:hidden;
 }
 
 .slider-inner {
