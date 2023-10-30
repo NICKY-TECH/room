@@ -83,7 +83,7 @@ main {
 }
 
 .content-two {
-  @apply max-[639px]:h-full max-[639px]:row-span-1 max-[639px]:justify-center max-[639px]:items-center md:col-span-1 md:flex md:flex-col;
+  @apply max-[639px]:h-full max-[639px]:row-span-1 max-[639px]:justify-center max-[639px]:items-center max-[639px]:flex md:col-span-1 md:flex md:flex-col;
   /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
