@@ -30,7 +30,7 @@ main {
 }
 
 .over-lay {
-  @apply w-full h-full  sm:hidden;
+  @apply w-full h-full max-[639px]:flex sm:hidden;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
