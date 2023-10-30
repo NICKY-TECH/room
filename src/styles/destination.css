@@ -949,7 +949,7 @@ main {
 }
 
 .content-two {
-  background-color: brown;
+  /* background-color: brown; */
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -977,7 +977,7 @@ main {
 }
 
 .content-two-inner {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .ham{
@@ -1065,7 +1065,6 @@ main {
 
 .main-content-two {
   color: hsl(0, 0%, 63%);
-  background-color: tomato;
 }
 
 .shop-now{
