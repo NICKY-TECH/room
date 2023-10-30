@@ -52,16 +52,17 @@ function Main() {
   }
 
   function open() {
-    if (menu === "false") {
-      setMenu("true");
-     let overLay=document.getElementsByClassName("over-lay");
-     overLay[0].style.display="block";
-    }
-    else if(menu==="true"){
-      setMenu("false");
-      let overLay=document.getElementsByClassName("over-lay");
-      overLay[0].style.display="none";
-    }
+    // if (menu === "false") {
+    //   setMenu("true");
+    //  let overLay=document.getElementsByClassName("over-lay");
+    //  overLay[0].style.display="block";
+    // }
+    // else if(menu==="true"){
+    //   setMenu("false");
+    //   let overLay=document.getElementsByClassName("over-lay");
+    //   overLay[0].style.display="none";
+    // }
+    setMenu(!menu)
   }
 
   return (
@@ -172,7 +173,7 @@ function Main() {
           <img src={light} />
         </div>
       </article>
-      <section className="over-lay">
+      <section className={menu?"over-lay":"over-lay-mobile"}>
         <nav className="over-lay-nav">
           <AiOutlineClose
             className="close"

@@ -774,16 +774,30 @@ main {
 .close {
   color: hsl(0, 0%, 27%);
   width: 40%;
-  height: 50%;
+  height: 30%;
 }
 
 .over-lay{
+  display: flex;
   height: 100%;
   width: 100%;
+}
+
+@media (min-width: 640px){
+
+  .over-lay{
+    display: none;
+  }
+}
+
+.over-lay {
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 1;
+}
+
+.over-lay-mobile{
   display: none;
 }
 
@@ -1182,8 +1196,13 @@ main {
     left: 0;
   }
 
-  .content-two-inner:nth-child(2){
+  .main-content-two{
+    width: 83.333333%;
     text-align: justify;
+  }
+  .Discover {
+    font-size: 1.6rem;
+    margin-left: 2px;
   }
 }
 

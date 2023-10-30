@@ -29,12 +29,15 @@ main {
 }
 
 .over-lay {
-  @apply w-full h-full;
+  @apply w-full h-full max-[480px]:block sm:hidden;
   background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 0;
   z-index: 1;
-  display: none;
+}
+
+.over-lay-mobile {
+  @apply hidden;
 }
 
 .over-lay-nav {
@@ -210,12 +213,12 @@ main {
     left: 0;
   }
 
-  .main-content-two{
+  .main-content-two {
     @apply w-5/6;
     text-align: justify;
   }
-.Discover{
-font-size: 1.6rem;
-margin-left: 2px;
+  .Discover {
+    font-size: 1.6rem;
+    margin-left: 2px;
   }
 }
