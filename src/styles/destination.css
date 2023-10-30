@@ -529,6 +529,9 @@ video {
 .mb-auto{
   margin-bottom: auto;
 }
+.ml-3{
+  margin-left: 0.75rem;
+}
 .ml-5{
   margin-left: 1.25rem;
 }
@@ -938,7 +941,7 @@ main {
 }
 
 .content-two-inner {
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .ham{
@@ -1034,6 +1037,16 @@ main {
   font-family: League Spartan;
   font-weight: 100;
   text-transform: uppercase;
+}
+
+@media (max-width: 480px){
+
+  .shop-now{
+    margin-left: 0.75rem;
+  }
+}
+
+.shop-now {
   font-size: 1.3rem;
   letter-spacing: 0.5em;
 }
@@ -1168,6 +1181,11 @@ main {
   .content-one .nav {
     left: 0;
   }
+
+  .content-two-inner{
+    text-align: justify;
+    margin-left: 6px;
+  }
 }
 
 .hover\:cursor-pointer:hover{
@@ -1178,6 +1196,10 @@ main {
 
   .max-\[480px\]\:row-span-1{
     grid-row: span 1 / span 1;
+  }
+
+  .max-\[480px\]\:ml-3{
+    margin-left: 0.75rem;
   }
 
   .max-\[480px\]\:flex{

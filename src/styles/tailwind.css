@@ -132,7 +132,7 @@ main {
 }
 
 .shop-now {
-  @apply font-LS font-thin uppercase my-auto;
+  @apply max-[480px]:ml-3 font-LS font-thin uppercase my-auto;
   font-size: 1.3rem;
   letter-spacing: 0.5em;
 }
@@ -208,5 +208,10 @@ main {
 @media (max-width: 480px) {
   .content-one .nav {
     left: 0;
+  }
+
+  .content-two-inner{
+    text-align: justify;
+    margin-left: 6px;
   }
 }
