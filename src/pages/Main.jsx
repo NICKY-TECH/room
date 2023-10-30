@@ -173,7 +173,7 @@ function Main() {
           <img src={light} />
         </div>
       </article>
-  <section className={menu?"over-lay":"over-lay-hidden"}>
+  <section className={menu?"over-lay-hidden":"over-lay"}>
         <nav className="over-lay-nav">
           <AiOutlineClose
             className="close"

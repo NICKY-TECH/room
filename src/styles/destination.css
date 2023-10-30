@@ -796,6 +796,13 @@ main {
   width: 100%;
 }
 
+@media (max-width: 639px){
+
+  .over-lay{
+    display: flex;
+  }
+}
+
 @media (min-width: 640px){
 
   .over-lay{
