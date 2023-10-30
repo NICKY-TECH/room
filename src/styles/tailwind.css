@@ -132,7 +132,7 @@ main {
 }
 
 .shop-now {
-  @apply font-LS font-thin uppercase my-auto;
+  @apply  font-LS font-thin uppercase my-auto;
   font-size: 1.3rem;
   letter-spacing: 0.5em;
 }
