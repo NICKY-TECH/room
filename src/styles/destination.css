@@ -1015,6 +1015,7 @@ main {
   position: absolute;
   top: 30px;
   left: 25px;
+  background-color: brown;
 }
 
 .content-one .nav ul{
@@ -1078,7 +1079,7 @@ main {
 @media (max-width: 480px){
 
   .shop-now{
-    margin-left: 0.75rem;
+    margin-left: 1.25rem;
   }
 }
 
@@ -1213,7 +1214,7 @@ main {
   color: hsl(0, 0%, 63%);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 639px) {
   .content-one .nav {
     left: 0;
   }
@@ -1224,8 +1225,12 @@ main {
     margin: auto;
   }
   .Discover {
+    margin-top: auto;
     font-size: 1.7rem;
-    margin-left: auto;
+    margin-left: 30px;
+  }
+  .shop-now{
+    margin-bottom: auto;
   }
 }
 
@@ -1278,8 +1283,8 @@ main {
 
 @media (max-width: 480px){
 
-  .max-\[480px\]\:ml-3{
-    margin-left: 0.75rem;
+  .max-\[480px\]\:ml-5{
+    margin-left: 1.25rem;
   }
 
   .max-\[480px\]\:flex{

@@ -102,6 +102,7 @@ main {
   position: absolute;
   top: 30px;
   left: 25px;
+  background-color: brown;
 }
 
 .content-one .nav ul {
@@ -136,7 +137,7 @@ main {
 }
 
 .shop-now {
-  @apply max-[480px]:ml-3 font-LS font-thin uppercase my-auto;
+  @apply max-[480px]:ml-5 font-LS font-thin uppercase my-auto;
   font-size: 1.3rem;
   letter-spacing: 0.5em;
 }
@@ -209,7 +210,7 @@ main {
   color: hsl(0, 0%, 63%);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 639px) {
   .content-one .nav {
     left: 0;
   }
@@ -220,7 +221,11 @@ main {
     margin: auto;
   }
   .Discover {
+    margin-top: auto;
     font-size: 1.7rem;
     margin-left: 30px;
+  }
+  .shop-now{
+    margin-bottom: auto;
   }
 }
