@@ -98,7 +98,7 @@ main {
 }
 
 .content-one .nav {
-  @apply flex gap-10 max-[639px]:justify-between max-[639px]:w-5/6;
+  @apply flex gap-10 max-[639px]:justify-between max-[639px]:w-full;
   position: absolute;
   top: 30px;
   left: 25px;

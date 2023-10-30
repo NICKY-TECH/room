@@ -1006,7 +1006,7 @@ main {
 @media (max-width: 639px){
 
   .content-one .nav{
-    width: 83.333333%;
+    width: 100%;
     justify-content: space-between;
   }
 }
