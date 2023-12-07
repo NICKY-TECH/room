@@ -5,6 +5,7 @@ import left from "../images/icon-angle-left.svg";
 import about from "../images/image-about-dark.jpg";
 import light from "../images/image-about-light.jpg";
 import mobile from "../images/desktop-image-hero-3.jpg";
+import mobileHero from "../images/mobile-image-hero-1.jpg"
 import hero from "../images/desktop-image-hero-1.jpg";
 import slides from "../data/Images.jsx";
 import logo from "../images/logo.svg";
@@ -13,6 +14,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 
 function Main() {
+    const imageUrl = window.innerWidth > 639 ? hero : mobileHero;
+    {console.log(imageUrl)}
   const [slide, setSlide] = useState(0);
   const [menu, setMenu] = useState("false");
   function prev() {
@@ -70,7 +73,7 @@ function Main() {
               <li>contact</li>
             </ul>
           </nav>
-          <img src={hero} />
+          <img src={`${imageUrl}`} />
 
           {/* <img src={hero} /> */}
         </div>
